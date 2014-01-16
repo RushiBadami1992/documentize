@@ -43,7 +43,9 @@ public class SaveDocumentTemplate extends HttpServlet {
     	{
     		catagory = request.getParameter("catagory");
     		documentName = request.getParameter("documentName");
-    		documentDescription = request.getParameter("documentDescription");  		
+    		documentDescription = request.getParameter("documentDescription");
+    		 //String documenturl=request.getParameter("documentTemplate");
+    		System.out.println("Document Url\t"+documentName);
     		Document document = new Document(catagory, documentName, documentDescription);
     		logger.info("cat : {} , docname: {},docdesc:{}",catagory,documentName,documentDescription);
     		etx.begin();
